@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eccles Cake Shop — Checkout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div id="promo-banner">
+        Special Offer: Order 6 or more Eccles cakes for free local delivery!
+      </div>
+      <h1>Baking Checkout Dashboard</h1>
+    </header>
+
+    <main id="introduction-box">
+      <p>
+        Review your selected baked items below, enter your valid UK delivery
+        coordinates, and submit the form transaction to confirm your order
+        request.
+      </p>
+
+      <img
+        id="product-image"
+        src="https://m1.quebecormedia.com/emp/cl_prod/canadian_living-_-e5034afa-5fb1-4aa0-a5f8-7855b7595b6c-_-EcclesCakes1453488321.jpg?impolicy=resize&width=1500&height=1500"
+        alt="Traditional Sugared Eccles Cake"
+      />
+    </main>
+
+    <section id="display-workspace">
+      <div id="checkout-card">
+        <h2>Your Basket Selection</h2>
+        <p><strong>Item:</strong> Traditional Sugared Eccles Cake</p>
+        <p><strong>Price:</strong> £1.50 each</p>
+
+        <form id="checkout-form">
+          <div class="form-group">
+            <label for="quantity-input">Quantity to Purchase:</label>
+            <input
+              type="number"
+              id="quantity-input"
+              value="1"
+              min="1"
+              max="24"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="address-input">Delivery Address:</label>
+            <input
+              type="text"
+              id="address-input"
+              placeholder="e.g. 12 Broad Street, Manchester"
+              required
+              minlength="10"
+            />
+          </div>
+
+          <p id="error-message"></p>
+
+          <div class="button-group">
+            <button type="submit" id="submit-btn">
+              Complete Order Submission
+            </button>
+          </div>
+        </form>
+
+        <div id="price-summary">
+          Estimated Order Value: <span id="price-display">£1.50</span>
+        </div>
+
+        <div id="order-summary">
+          <p id="summary-text">
+            No order processed yet. Awaiting form submission...
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p id="copyright-text">&copy; The Eccles Cake Bakery.</p>
+    </footer>
+  </body>
+</html>
